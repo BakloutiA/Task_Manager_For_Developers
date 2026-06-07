@@ -1,0 +1,126 @@
+[
+    {
+        "title": "API",
+        "description": "crate new API",
+        "priority": "Medium",
+        "intention": "General",
+        "completed": false,
+        "artifacts": [
+            {
+                "type": "Linked File",
+                "path": "C:/Users/bklou/OneDrive/Desktop/main/get next line/get_next_line.c",
+                "description": ""
+            }
+        ],
+        "deadline": "2026-03-19 08:30",
+        "progress": 57
+    },
+    {
+        "title": "devtest",
+        "description": "nn",
+        "priority": "High",
+        "intention": "General",
+        "completed": true,
+        "artifacts": [],
+        "deadline": null,
+        "progress": 100
+    },
+    {
+        "title": "write basic function",
+        "description": "",
+        "priority": "Medium",
+        "intention": "build app",
+        "completed": true,
+        "artifacts": [],
+        "deadline": null,
+        "progress": 0
+    },
+    {
+        "title": "1",
+        "description": "whatch tutoril",
+        "priority": "Medium",
+        "intention": "wtch youtub",
+        "completed": false,
+        "artifacts": [],
+        "deadline": null,
+        "progress": 0
+    },
+    {
+        "title": "write login model",
+        "description": "",
+        "priority": "Medium",
+        "intention": "General",
+        "completed": true,
+        "artifacts": [],
+        "deadline": null,
+        "progress": 100
+    },
+    {
+        "title": "push swap",
+        "description": "",
+        "priority": "High",
+        "intention": "General",
+        "completed": false,
+        "artifacts": [
+            {
+                "type": "Linked File",
+                "path": "C:/Users/bklou/OneDrive/Desktop/main/get next line/get_next_line_utils.c",
+                "description": ""
+            }
+        ],
+        "deadline": "2026-03-30 08:30",
+        "progress": 17
+    },
+    {
+        "title": "vedio editor app",
+        "description": "",
+        "priority": "Medium",
+        "intention": "fix the error",
+        "completed": false,
+        "artifacts": [
+            {
+                "type": "Linked File",
+                "path": "C:/Users/bklou/OneDrive/Desktop/main/get next line/get_next_line.c",
+                "description": ""
+            },
+            {
+                "type": "Linked File",
+                "path": "C:/Users/bklou/OneDrive/Desktop/main/get next line/main.c",
+                "description": ""
+            },
+            {
+                "type": "Linked File",
+                "path": "C:/Users/bklou/OneDrive/Desktop/main/libft",
+                "description": ""
+            }
+        ],
+        "deadline": "2026-03-20 00:00",
+        "progress": 88
+    },
+    {
+        "title": "Project: Software Engineering",
+        "description": "DLBCSPSE01",
+        "priority": "High",
+        "intention": "exam",
+        "completed": true,
+        "artifacts": [],
+        "deadline": "2026-03-20 08:00",
+        "progress": 100
+    },
+    {
+        "title": "amira",
+        "description": "",
+        "priority": "Low",
+        "intention": "General",
+        "completed": false,
+        "artifacts": [
+            {
+                "type": "Linked File",
+                "path": "C:/Users/bklou/OneDrive/Desktop/main/42 prepaire/ft_atoi.c",
+                "description": ""
+            }
+        ],
+        "deadline": "2026-04-04 04:00",
+        "progress": 28
+    }
+]
