@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  dashboard:
+    build: .
+    container_name: dev_dashboard
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ./data:/app/data

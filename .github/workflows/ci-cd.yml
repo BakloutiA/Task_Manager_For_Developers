@@ -1,0 +1,25 @@
+name: CI/CD DevOps Pipeline
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout Code
+        uses: actions/checkout@v4
+
+      - name: login to Docker Hub
+        users: docker/login-action@v3
+        with:
+          username: ${{ secrets::DOCKERHUB_USERNAME }}
+          password: ${{ secrets::DOCKERHUB_TOKEN }}
+
+       - name: Build and Push Docker Image
+         users: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: baklout/developer-dashboard:latest

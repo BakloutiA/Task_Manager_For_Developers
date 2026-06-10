@@ -56,6 +56,11 @@ class TaskManagerApp:
         self.root = root
         self.root.title("Developer Task Manager")
         self.root.geometry("1050x600")
+
+        folder = "data"
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        self.tasks_file = os.path.join(folder, "tasks.json")
         
         self.tasks = []
         self.item_to_task = {}
@@ -63,8 +68,6 @@ class TaskManagerApp:
         self.load_tasks()
         self.build_ui()
         self.refresh_list()
-
-        # Auto-refresh every 60 seconds to keep deadlines updated!
         self.auto_refresh()
 
     def auto_refresh(self):
@@ -74,16 +77,16 @@ class TaskManagerApp:
     # --- DATA MANAGEMENT ---
     def load_tasks(self):
         try:
-            with open("tasks.json", "r") as file:
+
+            with open(self.tasks_file, "r") as file:
                 loaded_data = json.load(file)
                 if isinstance(loaded_data, list):
                     for data in loaded_data:
-                        task = Task(data["title"], data.get("description", ""), 
-                                    data.get("priority", "Medium"), data.get("intention", "General"))
+                        task = Task(data["title"], data.get("description", ""), data.get("priority", "Medium"), data.get("intention","General"))
                         task.completed = data.get("completed", False)
                         task.artifacts = data.get("artifacts", [])
-                        task.deadline = data.get("deadline", None)    # Load deadline
-                        task.progress = data.get("progress", 0)      # Load progress
+                        task.deadline = data.get("deadline", None)
+                        task.progress  = data.get("progress", 0)
                         self.tasks.append(task)
         except (FileNotFoundError, json.JSONDecodeError):
             pass 
@@ -102,7 +105,7 @@ class TaskManagerApp:
                 "progress": task.progress       # Save progress
             })
         try:
-            with open("tasks.json", "w") as file:
+            with open(self.task_file, "w") as file:
                 json.dump(tasks_to_save, file, indent=4)
         except Exception as e:
             messagebox.showerror("Save Error", f"Could not save tasks: {e}")
